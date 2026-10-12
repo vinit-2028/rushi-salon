@@ -1515,6 +1515,8 @@ button:focus-visible {
     position: relative;
     overflow: hidden;
     border-radius: 4px;
+    grid-column: span 4;
+    aspect-ratio: 4 / 5;
 }
 
 .gallery__item img {
@@ -1600,6 +1602,10 @@ button:focus-visible {
         gap: 20px;
     }
 
+    .gallery__item {
+        grid-column: auto;
+    }
+
     .gallery__item--01 {
         grid-column: 1 / span 2;
         grid-row: auto;
@@ -1634,6 +1640,7 @@ button:focus-visible {
         gap: 16px;
     }
 
+    .gallery__item,
     .gallery__item--01,
     .gallery__item--02,
     .gallery__item--03 {
