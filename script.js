@@ -9,7 +9,7 @@
    6. Contact form (validation, WhatsApp submit)
    ========================================================= */
 
-const WHATSAPP_NUMBER = '919595073807';
+const WHATSAPP_NUMBER = '918007279626';
 
 // TODO: Replace with your real Formspree endpoint.
 // Sign up free at https://formspree.io -> create a new form -> copy the
@@ -195,7 +195,8 @@ function initBookingModal() {
 
     // Prevent booking a date in the past
     const today = new Date();
-    dateInput.min = today.toISOString().split('T')[0];
+    const pad2 = (n) => String(n).padStart(2, '0');
+    dateInput.min = `${today.getFullYear()}-${pad2(today.getMonth() + 1)}-${pad2(today.getDate())}`;
 
     // Wire up every element with data-book-trigger to open the modal
     document.querySelectorAll('[data-book-trigger]').forEach(trigger => {
@@ -364,6 +365,7 @@ function validateBookingForm(values) {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         if (chosen < today) errors['booking-date'] = 'Date can\'t be in the past.';
+        else if (chosen.getDay() === 2) errors['booking-date'] = 'We\'re closed on Tuesdays. Please pick another day.';
     }
 
     if (!values.time) errors['booking-time'] = 'Please choose a time.';
@@ -686,6 +688,7 @@ function initContactForm() {
         const values = {
             name: document.getElementById('contact-name').value.trim(),
             phone: document.getElementById('contact-phone').value.trim(),
+            email: document.getElementById('contact-email').value.trim(),
             message: document.getElementById('contact-message').value.trim()
         };
 
@@ -723,7 +726,7 @@ function initContactForm() {
         submitBtn.disabled = false;
         submitLabel.textContent = 'Send Message';
 
-        const message = `Hi, I have a question.\n\nName: ${values.name}\nPhone: ${values.phone}\nMessage: ${values.message}`;
+        const message = `Hi, I have a question.\n\nName: ${values.name}\nPhone: ${values.phone}${values.email ? `\nEmail: ${values.email}` : ''}\nMessage: ${values.message}`;
         const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         whatsappFallback.href = whatsappUrl;
 

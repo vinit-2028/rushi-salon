@@ -1,12 +1,17 @@
 :root {
-    --color-ink: #171514;
-    --color-paper: #f5f2ec;
-    --color-surface: #d8d8d5;
-    --color-earth: #4c403a;
-    --color-earth-muted: rgba(76, 64, 58, 0.68);
-    --color-paper-muted: rgba(245, 242, 236, 0.78);
-    --color-line: rgba(245, 242, 236, 0.32);
-    --color-surface-line: rgba(76, 64, 58, 0.22);
+    /* Brand palette - taken from the logo (black + metallic gold) and the studio interior (ivory, cream, black) */
+    --color-ink: #0b0b0b;
+    --color-paper: #faf7f0;
+    --color-surface: #eee7d8;
+    --color-earth: #1d1a16;
+    --color-earth-muted: rgba(29, 26, 22, 0.68);
+    --color-paper-muted: rgba(250, 247, 240, 0.78);
+    --color-line: rgba(201, 162, 75, 0.38);
+    --color-surface-line: rgba(122, 92, 18, 0.30);
+    --color-gold: #c9a24b;
+    --color-gold-light: #e8d08c;
+    --color-gold-deep: #7a5c12;
+    --gradient-gold: linear-gradient(135deg, #b38a2e 0%, #e8d08c 48%, #b38a2e 100%);
     --font-body: Inter, "Segoe UI", Arial, sans-serif;
     --font-display: Georgia, "Times New Roman", serif;
 }
@@ -69,7 +74,7 @@ button:focus-visible {
     gap: clamp(18px, 3vw, 44px);
     padding: clamp(18px, 3vw, 30px) clamp(20px, 5vw, 72px);
     color: var(--color-paper);
-    background: linear-gradient(180deg, rgba(23, 21, 20, 0.54), rgba(23, 21, 20, 0));
+    background: linear-gradient(180deg, rgba(11, 11, 11, 0.54), rgba(11, 11, 11, 0));
 }
 
 .site-header__logo {
@@ -313,7 +318,7 @@ button:focus-visible {
     bottom: clamp(30px, 6vh, 62px);
     display: flex;
     gap: 28px;
-    color: rgba(245, 242, 236, 0.72);
+    color: rgba(250, 247, 240, 0.72);
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -347,7 +352,7 @@ button:focus-visible {
     align-items: center;
     gap: 12px;
     min-height: 44px;
-    color: rgba(245, 242, 236, 0.72);
+    color: rgba(250, 247, 240, 0.72);
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.14em;
@@ -559,7 +564,7 @@ button:focus-visible {
     flex-direction: column;
     gap: 6px;
     padding-bottom: 14px;
-    border-bottom: 1px dashed rgba(76, 64, 58, 0.15);
+    border-bottom: 1px dashed rgba(29, 26, 22, 0.15);
 }
 
 .price-item:last-child {
@@ -686,7 +691,7 @@ button:focus-visible {
         position: fixed;
         inset: 0;
         z-index: 90;
-        background: rgba(10, 9, 8, 0.65);
+        background: rgba(5, 5, 5, 0.65);
         backdrop-filter: blur(4px);
         opacity: 0;
         visibility: hidden;
@@ -744,7 +749,7 @@ button:focus-visible {
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--color-paper);
-        border-bottom: 1px solid rgba(245, 242, 236, 0.12);
+        border-bottom: 1px solid rgba(250, 247, 240, 0.12);
         transition: color 200ms ease, padding-left 200ms ease;
     }
 
@@ -2426,7 +2431,7 @@ button:focus-visible {
     margin-bottom: 18px;
     font-size: 15px;
     letter-spacing: 0.2em;
-    color: #e3b341;
+    color: var(--color-gold);
 }
 
 .testimonial__quote {
@@ -2472,7 +2477,7 @@ button:focus-visible {
 }
 
 .testimonials__arrow:hover {
-    background-color: rgba(245, 242, 236, 0.08);
+    background-color: rgba(250, 247, 240, 0.08);
     border-color: var(--color-paper);
 }
 
@@ -2487,7 +2492,7 @@ button:focus-visible {
     padding: 0;
     border: none;
     border-radius: 50%;
-    background-color: rgba(245, 242, 236, 0.28);
+    background-color: rgba(250, 247, 240, 0.28);
     cursor: pointer;
     transition: background-color 200ms ease, transform 200ms ease;
 }
@@ -2514,7 +2519,7 @@ button:focus-visible {
 }
 
 .testimonials__playpause:hover {
-    background-color: rgba(245, 242, 236, 0.08);
+    background-color: rgba(250, 247, 240, 0.08);
     border-color: var(--color-paper);
 }
 
@@ -2565,7 +2570,7 @@ button:focus-visible {
 .booking-modal__backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(23, 21, 20, 0.72);
+    background: rgba(11, 11, 11, 0.72);
     backdrop-filter: blur(2px);
 }
 
@@ -2608,7 +2613,7 @@ button:focus-visible {
 }
 
 .booking-modal__close:hover {
-    background-color: rgba(245, 242, 236, 0.08);
+    background-color: rgba(250, 247, 240, 0.08);
 }
 
 .booking-modal__eyebrow {
@@ -2699,7 +2704,7 @@ button:focus-visible {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--color-earth);
-    box-shadow: 0 0 0 3px rgba(76, 64, 58, 0.15);
+    box-shadow: 0 0 0 3px rgba(29, 26, 22, 0.15);
 }
 
 .booking-form input.has-error,
@@ -2760,8 +2765,8 @@ button:focus-visible {
 }
 
 .contact-form__submit:hover {
-    background-color: #5c4d45;
-    border-color: #5c4d45;
+    background-color: #2a2621;
+    border-color: #2a2621;
 }
 
 .booking-form__note {
@@ -2811,7 +2816,7 @@ button:focus-visible {
 }
 
 .booking-form__whatsapp-link:hover {
-    background-color: rgba(245, 242, 236, 0.08);
+    background-color: rgba(250, 247, 240, 0.08);
     border-color: var(--color-paper);
 }
 
@@ -2847,7 +2852,7 @@ button:focus-visible {
 }
 
 .booking-form__success-close:hover {
-    background-color: rgba(245, 242, 236, 0.08);
+    background-color: rgba(250, 247, 240, 0.08);
 }
 
 @media (max-width: 600px) {
@@ -2956,7 +2961,7 @@ button:focus-visible {
 .lightbox__backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(10, 9, 8, 0.92);
+    background: rgba(5, 5, 5, 0.92);
 }
 
 .lightbox__figure {
@@ -2985,9 +2990,9 @@ button:focus-visible {
     justify-content: center;
     width: 44px;
     height: 44px;
-    border: 1px solid rgba(245, 242, 236, 0.3);
+    border: 1px solid rgba(250, 247, 240, 0.3);
     border-radius: 50%;
-    background: rgba(23, 21, 20, 0.5);
+    background: rgba(11, 11, 11, 0.5);
     color: var(--color-paper);
     font-size: 18px;
     cursor: pointer;
@@ -2996,7 +3001,7 @@ button:focus-visible {
 
 .lightbox__close:hover,
 .lightbox__nav:hover {
-    background-color: rgba(245, 242, 236, 0.15);
+    background-color: rgba(250, 247, 240, 0.15);
     border-color: var(--color-paper);
 }
 
@@ -3053,4 +3058,240 @@ button:focus-visible {
     .testimonials__track {
         transition: none !important;
     }
+}
+
+/* =========================================================
+   Additions: Bridal category, Academy CTA, Privacy section
+   ========================================================= */
+
+/* 4th price category sits full-width under the first three */
+.price-category--wide {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+    row-gap: 16px;
+}
+
+.price-category--wide .price-category__title {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 767px) {
+    .price-category--wide {
+        display: flex;
+    }
+}
+
+/* Academy call-to-action (light background, so it has its own link style) */
+.trust__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(40px, 6vw, 64px);
+}
+
+.trust__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-surface-line);
+    color: var(--color-earth);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 200ms ease, border-color 200ms ease;
+}
+
+.trust__link span:last-child {
+    transition: transform 200ms ease;
+}
+
+.trust__link:hover {
+    border-color: currentColor;
+    color: var(--color-ink);
+}
+
+.trust__link:hover span:last-child {
+    transform: translate(3px, -3px);
+}
+
+/* Privacy policy (replaces inline styles that used undefined variables) */
+.privacy-policy {
+    padding-block: 48px;
+    background: var(--color-paper);
+    color: var(--color-earth);
+    border-top: 1px solid var(--color-surface-line);
+}
+
+.privacy-policy__container {
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.privacy-policy__title {
+    margin: 0 0 16px;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.privacy-policy__text {
+    max-width: 65ch;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-earth-muted);
+}
+
+/* =========================================================
+   BRAND THEME: black & gold
+   (colours come from the logo and the studio interior;
+   edit the tokens in :root at the top to retune everything)
+   ========================================================= */
+
+::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+}
+
+a:focus-visible,
+button:focus-visible,
+.gallery__trigger:focus-visible {
+    outline-color: var(--color-gold);
+}
+
+/* Header */
+.site-header__logo-img {
+    border: 1px solid rgba(201, 162, 75, 0.55);
+}
+
+.site-header__nav a::after {
+    background-color: var(--color-gold);
+}
+
+.site-header__nav a:hover,
+.site-header__nav a:focus {
+    color: var(--color-gold-light);
+}
+
+.site-header__book {
+    color: var(--color-gold-light);
+}
+
+/* Hero */
+.hero__eyebrow {
+    color: var(--color-gold-light);
+}
+
+.hero__cta--primary {
+    background: var(--gradient-gold);
+    border-color: var(--color-gold);
+    color: var(--color-ink);
+}
+
+.hero__cta--primary:hover {
+    background: var(--color-gold-light);
+    border-color: var(--color-gold-light);
+}
+
+.hero__cta--secondary {
+    border-bottom-color: var(--color-gold);
+}
+
+/* Eyebrows - deep gold on light sections, bright gold on dark sections */
+.intro__eyebrow,
+.services__eyebrow,
+.signature__eyebrow,
+.signature__category,
+.trust__eyebrow,
+.contact__eyebrow,
+.contact__label {
+    color: var(--color-gold-deep);
+}
+
+.experience__eyebrow,
+.gallery__eyebrow,
+.testimonials__eyebrow,
+.booking-cta__eyebrow,
+.booking-modal__eyebrow,
+.site-footer__label {
+    color: var(--color-gold);
+}
+
+/* Numbers, prices, accents */
+.experience__number {
+    color: var(--color-gold);
+}
+
+.trust__number {
+    color: var(--color-gold-deep);
+    opacity: 1;
+}
+
+/* keep body copy readable on the new light background */
+.trust__intro,
+.trust__principle-text {
+    opacity: 1;
+}
+
+.price-item__price {
+    color: var(--color-gold-deep);
+}
+
+.site-footer__logo {
+    color: var(--color-gold-light);
+}
+
+/* Testimonials */
+.testimonials__dot.is-active {
+    background-color: var(--color-gold);
+}
+
+.testimonials__arrow:hover,
+.testimonials__playpause:hover {
+    border-color: var(--color-gold);
+}
+
+/* Primary buttons on dark sections: metallic gold like the logo */
+.booking-cta__primary,
+.booking-form__submit {
+    background: var(--gradient-gold);
+    border-color: var(--color-gold);
+    color: var(--color-ink);
+}
+
+.booking-cta__primary:hover,
+.booking-form__submit:hover {
+    background: var(--color-gold-light);
+    border-color: var(--color-gold-light);
+    color: var(--color-ink);
+}
+
+/* Contact form button on the light section */
+.contact-form__submit {
+    background: var(--color-ink);
+    border-color: var(--color-ink);
+    color: var(--color-gold-light);
+}
+
+.contact-form__submit:hover {
+    background: var(--color-gold-deep);
+    border-color: var(--color-gold-deep);
+    color: #ffffff;
+}
+
+/* Form focus rings */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.3);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-gold-deep);
+    box-shadow: 0 0 0 3px rgba(122, 92, 18, 0.2);
 }
