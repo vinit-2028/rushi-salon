@@ -618,128 +618,172 @@
             </div>
         </section>
 
-        <!-- Step 7.5: Testimonials Section -->
+        <!-- Step 7.5: Google-style Reviews Section -->
+        <!-- Shared Google "G" logo (inline, so no request is made to Google when the page loads) -->
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+            <symbol id="google-g" viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </symbol>
+        </svg>
+
         <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
             <div class="testimonials__container">
                 <header class="testimonials__header fade-reveal">
-                    <p class="testimonials__eyebrow">WHAT GUESTS SAY</p>
-                    <h2 id="testimonials-title" class="testimonials__title">
-                        Loved by the people<br>we care for.
-                    </h2>
+                    <div class="gr-brand">
+                        <h2 id="testimonials-title" class="testimonials__title">
+                            <span class="gr-wordmark" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span>
+                            Reviews
+                        </h2>
+                        <!-- TODO: replace 4.8 with the studio's real Google rating, and paste real reviews into the cards below. -->
+                        <div class="gr-summary">
+                            <span class="gr-summary__score">4.8</span>
+                            <span class="gr-stars gr-stars--lg" role="img" aria-label="Rated 4.8 out of 5"><span class="gr-stars__on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+                            <a class="gr-summary__link" href="https://www.google.com/maps/place/THE+RUSHI+HAIR+%26+BEAUTY+FAMILY+STUDIO%26Academy/@17.1186295,74.1930062,15z/data=!4m6!3m5!1s0x3bc175a454d85e47:0x9cbe2909d9190270!8m2!3d17.1186295!4d74.1930062!16s%2Fg%2F11w2_bxt_t?entry=ttu" target="_blank" rel="noopener noreferrer">See all reviews on Google</a>
+                        </div>
+                    </div>
+
+                    <a class="gr-cta" href="https://search.google.com/local/writereview?placeid=ChIJR17YVKR1wTsRcAIZ2Qkpvpw" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                        <span>Review us on Google</span>
+                    </a>
                 </header>
 
                 <div class="testimonials__carousel fade-reveal" id="testimonials-carousel">
                     <div class="testimonials__track" id="testimonials-track">
                         <article class="testimonial" role="group" aria-roledescription="slide"
-                            aria-label="Testimonial 1 of 6">
-                            <div class="testimonial__stars" aria-hidden="true">★★★★★</div>
-                            <p class="testimonial__quote">
-                                Booked in minutes on the site and the facial genuinely lived up to the hype. The scalp
-                                massage alone was worth the visit.
-                            </p>
-                            <p class="testimonial__author">Priya M.</p>
+                            aria-label="Review 1 of 6">
+                            <div class="gr-card">
+                                <header class="gr-card__head">
+                                    <span class="gr-card__avatar" aria-hidden="true">P</span>
+                                    <div class="gr-card__who">
+                                        <p class="gr-card__name">Priya M.</p>
+                                        <p class="gr-card__time">2 weeks ago</p>
+                                    </div>
+                                    <svg class="gr-card__g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                                </header>
+                                <div class="gr-stars" role="img" aria-label="Rated 5 out of 5"><span class="gr-stars__on">★★★★★</span></div>
+                                <p class="gr-card__text">Booked in minutes on the site and the facial genuinely lived up to the hype. The scalp massage alone was worth the visit.</p>
+                            </div>
                         </article>
 
                         <article class="testimonial" role="group" aria-roledescription="slide"
-                            aria-label="Testimonial 2 of 6">
-                            <div class="testimonial__stars" aria-hidden="true">★★★★★</div>
-                            <p class="testimonial__quote">
-                                First time getting a proper haircut without waiting an hour. Clean space, friendly staff
-                                and fair prices.
-                            </p>
-                            <p class="testimonial__author">Rohan K.</p>
+                            aria-label="Review 2 of 6">
+                            <div class="gr-card">
+                                <header class="gr-card__head">
+                                    <span class="gr-card__avatar" aria-hidden="true">R</span>
+                                    <div class="gr-card__who">
+                                        <p class="gr-card__name">Rohan K.</p>
+                                        <p class="gr-card__time">1 month ago</p>
+                                    </div>
+                                    <svg class="gr-card__g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                                </header>
+                                <div class="gr-stars" role="img" aria-label="Rated 5 out of 5"><span class="gr-stars__on">★★★★★</span></div>
+                                <p class="gr-card__text">First time getting a proper haircut without waiting an hour. Clean space, friendly staff and fair prices.</p>
+                            </div>
                         </article>
 
                         <article class="testimonial" role="group" aria-roledescription="slide"
-                            aria-label="Testimonial 3 of 6">
-                            <div class="testimonial__stars" aria-hidden="true">★★★★★</div>
-                            <p class="testimonial__quote">
-                                The Botanical Glow Ritual is now a monthly ritual for me. My skin has never looked
-                                better.
-                            </p>
-                            <p class="testimonial__author">Anjali S.</p>
+                            aria-label="Review 3 of 6">
+                            <div class="gr-card">
+                                <header class="gr-card__head">
+                                    <span class="gr-card__avatar" aria-hidden="true">A</span>
+                                    <div class="gr-card__who">
+                                        <p class="gr-card__name">Anjali S.</p>
+                                        <p class="gr-card__time">2 months ago</p>
+                                    </div>
+                                    <svg class="gr-card__g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                                </header>
+                                <div class="gr-stars" role="img" aria-label="Rated 5 out of 5"><span class="gr-stars__on">★★★★★</span></div>
+                                <p class="gr-card__text">The Botanical Glow Ritual is now a monthly ritual for me. My skin has never looked better.</p>
+                            </div>
                         </article>
 
                         <article class="testimonial" role="group" aria-roledescription="slide"
-                            aria-label="Testimonial 4 of 6">
-                            <div class="testimonial__stars" aria-hidden="true">★★★★☆</div>
-                            <p class="testimonial__quote">
-                                Easy WhatsApp booking and they remembered my usual cut from last time. Small touches
-                                like that matter.
-                            </p>
-                            <p class="testimonial__author">Kunal D.</p>
+                            aria-label="Review 4 of 6">
+                            <div class="gr-card">
+                                <header class="gr-card__head">
+                                    <span class="gr-card__avatar" aria-hidden="true">K</span>
+                                    <div class="gr-card__who">
+                                        <p class="gr-card__name">Kunal D.</p>
+                                        <p class="gr-card__time">3 months ago</p>
+                                    </div>
+                                    <svg class="gr-card__g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                                </header>
+                                <div class="gr-stars" role="img" aria-label="Rated 4 out of 5"><span class="gr-stars__on">★★★★</span><span class="gr-stars__off">★</span></div>
+                                <p class="gr-card__text">Easy WhatsApp booking and they remembered my usual cut from last time. Small touches like that matter.</p>
+                            </div>
                         </article>
 
                         <article class="testimonial" role="group" aria-roledescription="slide"
-                            aria-label="Testimonial 5 of 6">
-                            <div class="testimonial__stars" aria-hidden="true">★★★★★</div>
-                            <p class="testimonial__quote">
-                                The best beard styling I've had in a long time. The steaming treatment is a game changer
-                                for grooming.
-                            </p>
-                            <p class="testimonial__author">Vikram P.</p>
+                            aria-label="Review 5 of 6">
+                            <div class="gr-card">
+                                <header class="gr-card__head">
+                                    <span class="gr-card__avatar" aria-hidden="true">V</span>
+                                    <div class="gr-card__who">
+                                        <p class="gr-card__name">Vikram P.</p>
+                                        <p class="gr-card__time">4 months ago</p>
+                                    </div>
+                                    <svg class="gr-card__g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                                </header>
+                                <div class="gr-stars" role="img" aria-label="Rated 5 out of 5"><span class="gr-stars__on">★★★★★</span></div>
+                                <p class="gr-card__text">The best beard styling I've had in a long time. The steaming treatment is a game changer for grooming.</p>
+                            </div>
                         </article>
 
                         <article class="testimonial" role="group" aria-roledescription="slide"
-                            aria-label="Testimonial 6 of 6">
-                            <div class="testimonial__stars" aria-hidden="true">★★★★★</div>
-                            <p class="testimonial__quote">
-                                Found them through Google Maps and so glad I did. The whole team is incredibly welcoming
-                                and skilled.
-                            </p>
-                            <p class="testimonial__author">Sneha R.</p>
+                            aria-label="Review 6 of 6">
+                            <div class="gr-card">
+                                <header class="gr-card__head">
+                                    <span class="gr-card__avatar" aria-hidden="true">S</span>
+                                    <div class="gr-card__who">
+                                        <p class="gr-card__name">Sneha R.</p>
+                                        <p class="gr-card__time">5 months ago</p>
+                                    </div>
+                                    <svg class="gr-card__g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+                                </header>
+                                <div class="gr-stars" role="img" aria-label="Rated 5 out of 5"><span class="gr-stars__on">★★★★★</span></div>
+                                <p class="gr-card__text">Found them through Google Maps and so glad I did. The whole team is incredibly welcoming and skilled.</p>
+                            </div>
                         </article>
                     </div>
 
                     <div class="testimonials__controls">
                         <button type="button" class="testimonials__arrow" id="testimonials-prev"
-                            aria-label="Previous testimonial">
+                            aria-label="Previous review">
                             <span aria-hidden="true">&larr;</span>
                         </button>
 
                         <div class="testimonials__dots" id="testimonials-dots" role="tablist"
-                            aria-label="Testimonial navigation">
+                            aria-label="Review navigation">
                             <button type="button" class="testimonials__dot is-active" data-slide-to="0" role="tab"
-                                aria-selected="true" aria-label="Go to testimonial 1"></button>
+                                aria-selected="true" aria-label="Go to review 1"></button>
                             <button type="button" class="testimonials__dot" data-slide-to="1" role="tab"
-                                aria-selected="false" aria-label="Go to testimonial 2"></button>
+                                aria-selected="false" aria-label="Go to review 2"></button>
                             <button type="button" class="testimonials__dot" data-slide-to="2" role="tab"
-                                aria-selected="false" aria-label="Go to testimonial 3"></button>
+                                aria-selected="false" aria-label="Go to review 3"></button>
                             <button type="button" class="testimonials__dot" data-slide-to="3" role="tab"
-                                aria-selected="false" aria-label="Go to testimonial 4"></button>
+                                aria-selected="false" aria-label="Go to review 4"></button>
                             <button type="button" class="testimonials__dot" data-slide-to="4" role="tab"
-                                aria-selected="false" aria-label="Go to testimonial 5"></button>
+                                aria-selected="false" aria-label="Go to review 5"></button>
                             <button type="button" class="testimonials__dot" data-slide-to="5" role="tab"
-                                aria-selected="false" aria-label="Go to testimonial 6"></button>
+                                aria-selected="false" aria-label="Go to review 6"></button>
                         </div>
 
                         <button type="button" class="testimonials__arrow" id="testimonials-next"
-                            aria-label="Next testimonial">
+                            aria-label="Next review">
                             <span aria-hidden="true">&rarr;</span>
                         </button>
 
                         <button type="button" class="testimonials__playpause" id="testimonials-playpause"
-                            aria-label="Pause auto-rotating testimonials" aria-pressed="false">
+                            aria-label="Pause auto-rotating reviews" aria-pressed="false">
                             <span aria-hidden="true" id="testimonials-playpause-icon">&#10073;&#10073;</span>
                         </button>
                     </div>
 
                     <p class="sr-only" id="testimonials-live" aria-live="polite"></p>
-                </div>
-
-                <!-- TODO: the "Rate Us on Google" link below points to "The hair Avenue unisex salon". Replace it with THIS salon's Google review link. -->
-                <div class="testimonials__cta fade-reveal" style="margin-top: 72px;">
-                    <div class="testimonial__stars" aria-hidden="true">★★★★★</div>
-                    <p class="gallery__intro" style="margin: 0 auto 24px;">
-                        Love Your Experience?<br>Your feedback helps The Rushi Hair &amp; Beauty Studio &amp; Academy
-                        and helps other customers
-                        discover us.
-                    </p>
-                    <a
-                        href="https://www.google.com/maps/place/THE+RUSHI+HAIR+%26+BEAUTY+FAMILY+STUDIO%26Academy/@17.1186295,74.1930062,15z/data=!4m6!3m5!1s0x3bc175a454d85e47:0x9cbe2909d9190270!8m2!3d17.1186295!4d74.1930062!16s%2Fg%2F11w2_bxt_t?entry=ttu" target="_blank" rel="noopener noreferrer">
-                        <span>Rate Us on Google</span>
-                        <span aria-hidden="true">↗</span>
-                    </a>
                 </div>
             </div>
         </section>

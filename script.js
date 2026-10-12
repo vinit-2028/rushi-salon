@@ -570,7 +570,7 @@ function initTestimonialsCarousel() {
             dot.setAttribute('aria-selected', 'false');
         }
         dot.setAttribute('role', 'tab');
-        dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+        dot.setAttribute('aria-label', `Go to review ${i + 1}`);
         dot.addEventListener('click', () => {
             const slideWidth = slides[0].offsetWidth;
             track.scrollTo({ left: i * slideWidth, behavior: 'smooth' });
@@ -593,7 +593,7 @@ function initTestimonialsCarousel() {
         });
 
         if (liveRegion) {
-            liveRegion.textContent = `Testimonial group ${index + 1}`;
+            liveRegion.textContent = `Review ${index + 1}`;
         }
     }
 
@@ -627,7 +627,7 @@ function initTestimonialsCarousel() {
         isPaused = paused;
         if (playPauseBtn) {
             playPauseBtn.setAttribute('aria-pressed', String(paused));
-            playPauseBtn.setAttribute('aria-label', paused ? 'Play auto-rotating testimonials' : 'Pause auto-rotating testimonials');
+            playPauseBtn.setAttribute('aria-label', paused ? 'Play auto-rotating reviews' : 'Pause auto-rotating reviews');
             const icon = playPauseBtn.querySelector('span') || playPauseBtn;
             if (icon.id === 'testimonials-playpause-icon') {
                 icon.innerHTML = paused ? '&#9654;' : '&#10073;&#10073;';
